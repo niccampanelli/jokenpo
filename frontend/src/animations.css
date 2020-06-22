@@ -1,0 +1,88 @@
+.option:focus{ 
+    animation: enteringFocus 1s ease-in-out, loopFocus 1s infinite;
+    box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0.75);
+    transition: animation .1s ease-in-out;
+  }
+
+@keyframes enteringFocus{
+    0%{
+        box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0.75);
+    }
+    100%{
+        box-shadow: inset 0px 0px 0px 30px rgba(255, 255, 255, 0.75);
+    }
+}
+
+@keyframes loopFocus{
+    0%{
+        box-shadow: inset 0px 0px 0px 20px rgba(255, 255, 255, 0.75);
+    }
+    50%{
+        box-shadow: inset 0px 0px 0px 10px rgba(255, 255, 255, 0.75);
+    }
+    100%{
+        box-shadow: inset 0px 0px 0px 20px rgba(255, 255, 255, 0.75);
+    }
+}
+
+#playerEscolhendo{
+    animation: playerEscolhendo 1.5s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes playerEscolhendo{
+    
+    0%{
+        transform: rotateZ(0deg) translate(0vh, 0vh)
+    }
+    17%{
+        transform: rotateZ(-20deg) translate(0vh, -20vh)
+    }
+    34%{
+        transform: rotateZ(20deg) translate(0vh, 20vh)
+    }
+    51%{
+        transform: rotateZ(-15deg) translate(0vh, -15vh)
+    }
+    68%{
+        transform: rotateZ(20deg) translate(0vh, 20vh)
+    }
+    85%{
+        transform: rotateZ(-20deg) translate(0vh, -20vh)
+    }
+    100%{
+        transform: rotateZ(0deg) translate(0vh, 0vh)
+    }
+
+}
+
+#oponenteEscolhendo{
+    animation: oponenteEscolhendo 1.5s infinite;
+    transform-origin: center;    
+}
+
+@keyframes oponenteEscolhendo{
+    0%{
+        transform: rotateZ(0deg) scaleX(-1) translate(0vh, 0vh)
+    }
+    17%{
+        transform: rotateZ(20deg) scaleX(-1) translate(0vh, -20vh)
+    }
+    34%{
+        transform: rotateZ(-20deg) scaleX(-1) translate(0vh, 20vh)
+    }
+    51%{
+        transform: rotateZ(15deg) scaleX(-1) translate(0vh, -15vh)
+    }
+    68%{
+        transform: rotateZ(-20deg) scaleX(-1) translate(0vh, 20vh)
+    }
+    85%{
+        transform: rotateZ(20deg) scaleX(-1) translate(0vh, -20vh)
+    }
+    100%{
+        transform: rotateZ(0deg) scaleX(-1) translate(0vh, 0vh)
+    }
+
+}

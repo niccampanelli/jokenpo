@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 4vh;
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body{
+  display: relative;
+  background-color: rgb(255, 238, 0);
+  overflow: hidden;
+}
+
+.headline{
+  font-size: 8vh;
+  display: relative;
+}
+
+.highScoreText{
+  font-size: 3vh;
+  line-height: 2vh;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.350);
+  font-weight: 400;
+  z-index: 0;
+}
+
+.highScore{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 5vh;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 10vh;
+  z-index: 0;
+}
+
+.scoreBoard{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 20vh;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 5vh;
+  z-index: 0;
+}
+
+.headlineDiv{
+  width: 100vw;
+  height: 12vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.gameScreen{
+  margin-top: 10vh;
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 100%));
+  grid-template-rows: repeat(1, minmax(0, 100%));
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.betOptions{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 100%));
+  grid-template-rows: repeat(1, 100%);
+  gap: 2vh;
+  width: 50vh;
+  height: 15vh;
+  border-radius: 100%;
+}
+
+.playerName{
+  position: absolute;
+  left: 12vw;
+  top: 5vh;
+  background-color: transparent;
+  border: none;
+  font-size: 4vh;
+  font-weight: 700;
+  text-align: center;
+  height: 5vh;
+  transition: border-bottom 0.5s;
+  outline: none;
+}
+
+.playerNameAfter {
+  position: absolute;
+  left: 20vw;
+  top: 10vh;
+  width: 3.5vh;
+  border-bottom: solid 3px #00000034;
+  transform: scaleX(0);  
+  transition: all 250ms ease-in-out;
+}
+
+.playerName:hover + .playerNameAfter { 
+  transform: scaleX(4);  
+}
+
+.playerName:focus + .playerNameAfter { 
+  transform: scaleX(10);
+  border-bottom: solid 3px #000000;
+}
+
+.playerName::placeholder{
+  color: rgba(0, 0, 0, 0.250);
+}
+
+.aiName{
+  position: absolute;
+  right: 16vw;
+  top: 5vh;
+}
+
+.chooseHeadlineDiv{
+  width: 100vw;
+  height: 9vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.chooseHeadline{
+  font-size: 5vh;
+  display: relative;
+}
+
+.option{
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 100%;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: background-color .2s ease;
+}
+
+.option:hover{
+  background-color: rgb(202, 202, 202);
+}
+
+.pedraOption, .papelOption, .tesouraOption{
+  width: 60%;
+  height: 60%;
+  align-self: center;
+  justify-self: center;
+  transform: rotateZ(-90deg);
+}
+
+.hand{
+  width: 60vh;
+  height: 60vh;
+}
+
+.gameStatus{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 45vh;
+}
+
+.credit{
+  position: absolute;
+  bottom: 1vh;
+  right: 4vh;
+  font-weight: 400;
+  font-size: 3vh;
+}
+
+.linkToMedia{
+  font-size: 3vh;
+  text-decoration: none;
+  color: #00000070;
+  font-weight: 400;
+}
+
+.shareButton{
+  position: absolute;
+  right: 2vh;
+  top: 2vh;
+  background-color: white;
+  border: none;
+  width: 8vh;
+  height: 8vh;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  border-radius: 100%;
+  outline: none;
+}
+
+.shareButton svg{
+  display: block;
+  margin: auto;
+}
