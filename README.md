@@ -1,15 +1,15 @@
-#Jokenpo Online
+#Jokenpo Online#
 
 Um simples jogo de Jokenpo feito utilizando o #ReactJS e sua nova tecnologia dos Hooks da versão #16.8.
 
 O jogador deve escolher uma aposta entre pedra, papel e tesoura clicar no respectivo botão. Ao clicar no botão, uma função makeTheGame é chamada. Essa função manda uma requisição post para a rota /game com a entrada numérica da opção do jogador (a pedra manda 0, o papel manda 1 e a tesoura manda 2). Na API em NodeJS que utiliza a framework Express, existe uma rota post /game que ao ser chamada invoca a função index do gameController.
 
-##routes.js
+##routes.js##
 ```
 routes.post('/game', gameController.index);
 ```
 
-##gameController.js
+##gameController.js##
 O gameController.js por sua vez, pega a entrada numérica que ele recebe e compara com um valor aleatório entre 0 e 2
 
 ```
