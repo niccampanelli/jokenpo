@@ -81,6 +81,27 @@ body{
   text-align: center;
 }
 
+.playerChoice{
+  position: relative;
+  z-index: 500;
+}
+
+.opponentChoice{
+  position: relative;
+  z-index: 500;
+  text-align: right;
+}
+
+.winEffect{
+  position: absolute;
+  width: 100%;
+  z-index: -5;
+}
+
+#opponentWin{
+  transform: scaleX(-1);
+}
+
 .betOptions{
   position: absolute;
   margin-left: auto;
