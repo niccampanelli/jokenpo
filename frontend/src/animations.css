@@ -1,3 +1,16 @@
+.winEffect{
+    animation: opacityIncrease 2s ease;
+}
+
+@keyframes opacityIncrease{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 .option:focus{ 
     animation: enteringFocus 1s ease-in-out, loopFocus 1s infinite;
     box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0.75);
