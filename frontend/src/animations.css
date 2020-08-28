@@ -12,9 +12,8 @@
 }
 
 .option:focus{ 
-    animation: enteringFocus 1s ease-in-out, loopFocus 1s infinite;
+    animation: loopFocus 1s infinite;
     box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0.75);
-    transition: animation .1s ease-in-out;
   }
 
 @keyframes enteringFocus{
@@ -37,6 +36,8 @@
         box-shadow: inset 0px 0px 0px 20px rgba(255, 255, 255, 0.75);
     }
 }
+
+@media only screen and (orientation: landscape) {
 
 #playerEscolhendo{
     animation: playerEscolhendo 1.5s infinite;
@@ -99,3 +100,71 @@
     }
 
 }
+
+}
+
+@media only screen and (orientation: portrait) {
+
+    #playerEscolhendo{
+        animation: playerEscolhendo 1.5s infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+    
+    @keyframes playerEscolhendo{
+        
+        0%{
+            transform: rotateZ(0deg) translate(0vh, 0vh)
+        }
+        17%{
+            transform: rotateZ(-20deg) translate(0vh, -8vh)
+        }
+        34%{
+            transform: rotateZ(20deg) translate(0vh, 8vh)
+        }
+        51%{
+            transform: rotateZ(-15deg) translate(0vh, -5.5vh)
+        }
+        68%{
+            transform: rotateZ(20deg) translate(0vh, 8vh)
+        }
+        85%{
+            transform: rotateZ(-20deg) translate(0vh, -8vh)
+        }
+        100%{
+            transform: rotateZ(0deg) translate(0vh, 0vh)
+        }
+    
+    }
+    
+    #oponenteEscolhendo{
+        animation: oponenteEscolhendo 1.5s infinite;
+        transform-origin: center;    
+    }
+    
+    @keyframes oponenteEscolhendo{
+        0%{
+            transform: rotateZ(0deg) scaleX(-1) translate(0vh, 0vh)
+        }
+        17%{
+            transform: rotateZ(20deg) scaleX(-1) translate(0vh, -8vh)
+        }
+        34%{
+            transform: rotateZ(-20deg) scaleX(-1) translate(0vh, 8vh)
+        }
+        51%{
+            transform: rotateZ(15deg) scaleX(-1) translate(0vh, -5.5vh)
+        }
+        68%{
+            transform: rotateZ(-20deg) scaleX(-1) translate(0vh, 8vh)
+        }
+        85%{
+            transform: rotateZ(20deg) scaleX(-1) translate(0vh, -8vh)
+        }
+        100%{
+            transform: rotateZ(0deg) scaleX(-1) translate(0vh, 0vh)
+        }
+    
+    }
+    
+    }

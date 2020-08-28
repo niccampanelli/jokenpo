@@ -3,6 +3,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-size: 4vh;
   font-family: 'Bebas Neue', cursive;
   text-transform: uppercase;
@@ -22,6 +23,8 @@ body{
   background-color: rgb(255, 238, 0);
   overflow: hidden;
 }
+
+@media only screen and (orientation: landscape) {
 
 .headline{
   font-size: 8vh;
@@ -202,6 +205,25 @@ body{
   height: 60vh;
 }
 
+.jokenpo{
+  position: absolute;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: repeat(3, minmax(0, 100%));
+  margin-left: auto;
+  margin-right: auto;
+  width: 35vh;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 35vh
+}
+
+.jo, .ken, .po{
+  width: 100%;
+  font-size: 8vh;
+}
+
 .gameStatus{
   position: absolute;
   margin-left: auto;
@@ -229,6 +251,7 @@ body{
 
 .shareButton{
   position: absolute;
+  cursor: pointer;
   right: 2vh;
   top: 2vh;
   background-color: white;
@@ -246,3 +269,252 @@ body{
   display: block;
   margin: auto;
 }
+}
+
+@media only screen and (orientation: portrait) {
+
+  .headline{
+    font-size: 8vh;
+    display: relative;
+  }
+  
+  .highScoreText{
+    font-size: 3vh;
+    line-height: 2vh;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.350);
+    font-weight: 400;
+    z-index: 0;
+  }
+  
+  .highScore{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 5vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 10vh;
+    z-index: 0;
+  }
+  
+  .scoreBoard{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 33vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 5vh;
+    z-index: 0;
+  }
+  
+  .headlineDiv{
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .gameScreen{
+    margin-top: 10vh;
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 100%));
+    grid-template-rows: repeat(1, minmax(0, 100%));
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+  }
+  
+  .playerChoice{
+    position: relative;
+    z-index: 500;
+  }
+  
+  .opponentChoice{
+    position: relative;
+    z-index: 500;
+    text-align: right;
+  }
+  
+  .winEffect{
+    position: absolute;
+    width: 100%;
+    z-index: -5;
+  }
+  
+  #opponentWin{
+    transform: scaleX(-1);
+  }
+  
+  .betOptions{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 100%));
+    grid-template-rows: repeat(1, 100%);
+    gap: 2vh;
+    width: 90vw;
+    height: 28vw;
+    border-radius: 100%;
+    bottom: 10vh;
+  }
+  
+  .playerName{
+    position: absolute;
+    left: 12vw;
+    top: 5vh;
+    background-color: transparent;
+    border: none;
+    font-size: 4vh;
+    font-weight: 700;
+    text-align: center;
+    height: 5vh;
+    transition: border-bottom 0.5s;
+    outline: none;
+  }
+  
+  .playerNameAfter {
+    position: absolute;
+    left: 20vw;
+    top: 10vh;
+    width: 3.5vh;
+    border-bottom: solid 3px #00000034;
+    transform: scaleX(0);  
+    transition: all 250ms ease-in-out;
+  }
+  
+  .playerName:hover + .playerNameAfter { 
+    transform: scaleX(4);  
+  }
+  
+  .playerName:focus + .playerNameAfter { 
+    transform: scaleX(10);
+    border-bottom: solid 3px #000000;
+  }
+  
+  .playerName::placeholder{
+    color: rgba(0, 0, 0, 0.250);
+  }
+  
+  .aiName{
+    position: absolute;
+    right: 16vw;
+    top: 5vh;
+  }
+  
+  .chooseHeadlineDiv{
+    width: 100vw;
+    height: 9vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .chooseHeadline{
+    font-size: 5vh;
+    display: relative;
+  }
+  
+  .option{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 100%;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: background-color .2s ease;
+  }
+  
+  .option:hover{
+    background-color: rgb(202, 202, 202);
+  }
+  
+  .pedraOption, .papelOption, .tesouraOption{
+    width: 60%;
+    height: 60%;
+    align-self: center;
+    justify-self: center;
+    transform: rotateZ(-90deg);
+  }
+  
+  .hand{
+    width: 20vh;
+    height: 20vh;
+  }
+  
+  .jokenpo{
+    position: absolute;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(3, minmax(0, 100%));
+    margin-left: auto;
+    margin-right: auto;
+    width: 35vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 35vh
+  }
+  
+  .jo, .ken, .po{
+    width: 100%;
+    font-size: 8vh;
+  }
+  
+  .gameStatus{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 45vh;
+  }
+  
+  .credit{
+    position: absolute;
+    bottom: 1vh;
+    left: 2vh;
+    font-weight: 400;
+    font-size: 4vw;
+  }
+  
+  .linkToMedia{
+    font-size: 2.5vh;
+    text-decoration: none;
+    color: #00000070;
+    font-weight: 400;
+  }
+  
+  .shareButton{
+    position: absolute;
+    cursor: pointer;
+    right: 2vh;
+    top: 2vh;
+    background-color: white;
+    border: none;
+    width: 8vh;
+    height: 8vh;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    border-radius: 100%;
+    outline: none;
+  }
+  
+  .shareButton svg{
+    display: block;
+    margin: auto;
+  }
+  }
