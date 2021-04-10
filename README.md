@@ -5,7 +5,7 @@ Um simples jogo de Jokenpo feito utilizando o **ReactJS** e sua nova tecnologia 
 O jogador deve escolher uma aposta entre pedra, papel e tesoura clicar no respectivo botão. Ao clicar no botão, uma função makeTheGame é chamada. Essa função manda uma requisição post para a rota /game com a entrada numérica da opção do jogador (a pedra manda 0, o papel manda 1 e a tesoura manda 2). Na API em NodeJS que utiliza a framework Express, existe uma rota post /game que ao ser chamada invoca a função index do gameController.
 
 ## routes.js
-```
+```javascript
 routes.post('/game', gameController.index);
 ```
 
