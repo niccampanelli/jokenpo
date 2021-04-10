@@ -12,7 +12,7 @@ routes.post('/game', gameController.index);
 ## gameController.js
 O gameController.js por sua vez, pega a entrada numérica que ele recebe e compara com um valor aleatório entre 0 e 2
 
-```
+```javascript
 index(request, response){
         const { entry } = request.body;
         const sortingResult = Math.floor(Math.random() * 3);
@@ -34,12 +34,12 @@ index(request, response){
     }
 ```
 Então, após isso, ele manda no corpo da resposta o resultado da rodada e a aposta do algorítimo jogando como
-```
+```javascript
 return response.json({resultado: "ganhou", aiPlayed: sortingResult});
 ```
 
 Voltando pro frontend, nós pegamos a resposta e armazenamos na constante result
-```
+```javascript
 const result = await api.post('/game', {entry})
 ```
 e depois pegamos o resultado e a aposta do algorítimo e salvamos em um estado useState.
